@@ -1,0 +1,334 @@
+
+<
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OB Montessori Center</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e6f2fa;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    padding: 12px 20px;
+}
+
+.navbar-brand {
+    margin-right: 25px;
+}
+
+.logo {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: white;
+    border: 2px solid #ddd;
+}
+
+.nav-link {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.portal-btn {
+    padding: 9px 20px;
+}
+
+.hero {
+    position: relative;
+    padding: 50px 0;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.header-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.welcome-box {
+    background-color: #f8f9fa;
+    padding: 20px;
+    width: 100%;
+}
+
+.welcome-box h1 {
+    color: #343a40;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.welcome-box p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.content-box {
+    background-color: white;
+    padding: 25px;
+    border-radius: 5px;
+}
+
+.content-box h2 {
+    color: #1769aa;
+    margin-bottom: 15px;
+}
+
+.content-box p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+#campuses h2 {
+    color: #1769aa;
+}
+
+.campus-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 5px;
+    height: 100%;
+    text-align: center;
+}
+
+.campus-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.campus-card h4 {
+    color: #1769aa;
+}
+
+.campus-card p {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.contact-section {
+    background-color: #1769aa;
+    color: white;
+    padding: 35px 0;
+    text-align: center;
+}
+
+footer {
+    background-color: #212529;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="#home">
+                <img src="data:image/jpeg;base64,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"
+                     alt="OB Montessori Logo"
+                     class="logo">
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#campuses">Campuses</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+
+                <a href="#" class="btn btn-primary portal-btn">
+                    My Portal 
+                </a>
+
+            </div>
+        </div>
+    </nav>
+
+
+
+
+        <div class="container">
+            <div class="welcome-box">
+
+                <h1>Welcome to OB Montessori Center!</h1>
+
+                <p>
+                    OB Montessori Center provides quality education
+                    that helps students develop their knowledge,
+                    skills, discipline, and confidence.
+                </p>
+
+                <a href="#about" class="btn btn-primary">
+                    Learn More
+                </a>
+
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="container my-5">
+        <div class="content-box">
+
+            <h2>About Us</h2>
+
+            <p>
+                OB Montessori Center is an educational institution
+                that follows the Montessori method of teaching.
+                It encourages students to become independent,
+                responsible, and confident individuals through
+                learning and practical experiences.
+            </p>
+
+        </div>
+    </section>
+
+    <section id="campuses" class="container my-5">
+
+        <h2 class="text-center mb-4">Our Campuses</h2>
+
+        <div class="row g-3">
+
+            <div class="col-md-4">
+                <div class="campus-card">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpwcP_EuPmu4-lkNX48PUYtnT67qGypaaePTUR-il-Ug&s=10"
+                         alt="Greenhills Campus">
+
+                    <h4>Greenhills Campus</h4>
+                    <p> 3 Eisenhower Street, Greenhills, San Juan City, Metro Manila, Philippines</p>
+
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="campus-card">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3lIjYarHc9KeUH_UIvdChGQBAmv0__TtRzlBxExc8aQ&s=10"
+                         alt="Sta. Ana Campus">
+
+                    <h4>Sta. Ana Campus</h4>
+                    <p>2241 Pedro Gil Street, Sta. Ana, Manila, Metro Manila, 1009 Philippines</p>
+
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="campus-card">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4uzui9sgANuLREuZ8P63nbjjuPM81ue5CByMmO0WO7w&s=10"
+                         alt="Las Piñas Campus">
+
+                    <h4>Las Piñas Campus</h4>
+                    <p> Luxembourg Street, B.F. Homes, Las Piñas City, Metro Manila</p>
+
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="campus-card">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJRrETpr2ROmZSbQRbYfICh9HmgWtj-N1GObN37BO9ZQ&s=10"
+                         alt="Fairview Campus">
+
+                    <h4>Fairview Campus</h4>
+                    <p>Napoli Street, corner Belfast Street, Neapolitan IV, Brittany Subdivision, Fairview, Quezon City, 1118 Metro Manila</p>
+
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="campus-card">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtDT3gY6X3XMSQM03z6cK98hZw2FMKpn-7Y32EnA8cnw&s=10"
+                         alt="Angeles Campus">
+
+                    <h4>Angeles Campus</h4>
+                    <p>MacArthur Highway, Angeles City, Pampanga, 2009</p>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+
+            <h2>Contact Us</h2>
+
+            <p>Learn more about OB Montessori Center and its educational programs.</p>
+
+            <p>Email: info@obmontessori.edu.ph</p>
+
+            <p>Phone: +63 2 8722 9720 to 26</p>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 OB Montessori Center | All Rights Reserved</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
